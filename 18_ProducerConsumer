@@ -1,0 +1,24 @@
+## The Producer-Consumer Problem->
+ involves two types of tasks sharing a limited buffer:
+
+Producer: Makes items and adds them to a buffer.
+Consumer: Takes items from the buffer to use.
+
+The challenge is:
+
+If the buffer is full, the producer must wait.
+If the buffer is empty, the consumer must wait.
+
+Solution in Simple Terms
+To handle this, we use three semaphores:
+
+Mutex: Ensures only one process (either producer or consumer) accesses the buffer at a time.
+
+Full: Counts items in the buffer (consumer waits if zero).
+
+Empty: Counts empty spaces in the buffer (producer waits if zero).
+
+Steps:
+Producer: Waits if empty is zero, then locks mutex to add an item, and signals full that an item is ready.
+Consumer: Waits if full is zero, locks mutex to take an item, and signals empty that a slot is free.
+In short, semaphores manage access to the buffer, letting the producer and consumer work together without overflow or empty waits.

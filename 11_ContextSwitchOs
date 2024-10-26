@@ -1,0 +1,94 @@
+## Swapping:
+
+Swapping is a memory management technique used by operating systems to manage the execution of processes. Here’s a concise overview:
+
+What is Swapping?
+
+Definition: Swapping is the process of moving processes between main memory (RAM) and a secondary storage device (like a hard disk) to free up memory for other processes.
+
+How It Works:
+
+When the system runs out of RAM, it can temporarily move inactive or less important processes from memory to disk (this is called "swapping out").
+When those processes are needed again, they can be loaded back into RAM (called "swapping in").
+
+Purpose:
+
+Memory Management: Helps to efficiently use limited memory resources by ensuring that active processes have enough RAM available.
+
+Multitasking: Enables the system to run multiple processes by offloading inactive ones to disk.
+
+Swapping vs. Paging:
+
+Swapping involves moving entire processes, while paging divides processes into smaller fixed-size units called pages, which can be moved in and out of memory as needed.
+
+Performance Consideration: Swapping can slow down system performance because accessing data from disk is significantly slower than accessing data from RAM.
+
+## Process Table :
+
+The process table is a data structure used by the operating system to keep track of all the processes that are currently running or waiting to run. Here’s a simple overview:
+
+Definition: It is a list or table that contains information about each process in the system.
+
+Contents: Each entry in the process table typically includes:
+
+Process ID (PID): A unique identifier for each process.
+
+Process State: Indicates whether the process is running, waiting, or terminated.
+
+Program Counter: Shows the current position in the process's code.
+
+CPU Registers: Stores the current values of the CPU registers for the process.
+
+Memory Management Info: Information about memory allocation, such as page tables.
+
+I/O Status: Information about input/output devices the process is using.
+
+Purpose: The process table helps the operating system manage and schedule processes efficiently, ensuring that each process gets the necessary resources to run.
+
+## Context Switching
+
+is the process of switching the CPU from one process to another. Here’s a simple breakdown:
+
+What It Is: Context switching allows multiple processes to share the CPU. It involves saving the current process's state and loading the next process's state so that each can resume where it left off.
+
+Steps:
+
+Save Current Process: The operating system saves the state of the currently running process.
+
+Select New Process: It chooses another process to run.
+Load New Process: The state of the new process is loaded so it can continue execution.
+
+Purpose: Enables multitasking, allowing many programs to run at the same time.
+Improves system responsiveness for users.
+
+Overhead: Context switching takes time and can slow down the system if done too frequently.
+
+## orphan Process :
+
+The orphan process in operating systems refers to a process that is still executing but whose parent process has terminated. When a parent process ends, its child processes do not automatically get terminated; instead, they become orphaned. Here’s a brief overview of the orphan process and how it's handled:
+
+Handling Orphans:
+
+In many operating systems, orphaned processes are automatically adopted by the init process (or a similar system process) to ensure they are properly managed and terminated after their completion. This prevents resource leaks.
+
+
+## zombie process:
+
+A zombie process is a process that has completed its execution but still has an entry in the process table. This occurs when the parent process has not yet read the exit status of the terminated child process. Here’s a concise overview of zombie processes:
+
+Definition: A zombie process is a defunct process that has finished executing but still remains in the system's process table, waiting for the parent process to collect its exit status.
+
+Creation: When a child process terminates, it sends a signal (SIGCHLD) to its parent. If the parent fails to call wait() (or waitpid()) to read the exit status, the child remains in the zombie state.
+
+Characteristics:
+
+Resource Usage: Zombie processes do not consume system resources like CPU or memory, but they do occupy an entry in the process table.
+
+Identification: They can be identified in process listings (e.g., using ps) by their status, which is usually shown as "Z" (for zombie).
+Handling:
+
+Reaping: The parent process should use wait() or waitpid() to "reap" the zombie process, which removes it from the process table.
+
+Orphan Zombies: If a parent process terminates before its child becomes a zombie, the orphaned zombie is typically adopted by the init process, which will subsequently clean it up.
+
+Impact: If too many zombie processes accumulate, they can exhaust the process table, preventing new processes from being created. Proper management is crucial to avoid this issue.

@@ -1,0 +1,68 @@
+## Segmentation->
+
+Segmentation is a memory management technique that divides a process's memory into variable-sized sections called segments, based on the logical divisions in the program, such as code, data, and stack. Unlike paging, which uses fixed-size pages, segmentation is based on the logical structure of the program, making each segment size different.
+
+Each segment is assigned a segment number and a segment offset, and the OS keeps a segment table to map each segment to its location in physical memory.
+
+## Key Points of Segmentation
+
+Logical Grouping: Memory is divided based on logical segments, which correspond to different parts of the program, like functions, arrays, etc.
+
+Variable Size: Segments are of different sizes depending on the memory needs of each program section.
+
+Segment Table: Each process has a segment table that keeps track of the starting address and length of each segment in memory.
+
+Protection and Sharing: Allows setting access permissions per segment and sharing specific segments with other processes (e.g., shared code segments).
+
+## Benefits of Segmentation
+
+No Internal Fragmentation: Memory is allocated only as much as needed for each segment, so there is less wasted space.
+
+Better Logical Representation: Since segments correspond to logical parts of the program, they make memory allocation more intuitive.
+
+## Drawbacks of Segmentation
+
+External Fragmentation: Variable-sized segments can create small free memory gaps, leading to external fragmentation.
+
+Complexity: Managing variable-sized segments and segment tables adds complexity to the OS.
+
+Example
+A program with a code segment (10 KB), a data segment (15 KB), and a stack segment (5 KB) would have three segments with different sizes. Each segment is loaded into a separate memory location.
+
+## Key MCQs
+
+In segmentation, a program's memory is divided into sections called:
+
+a) Pages
+b) Frames
+c) Segments
+d) Blocks
+Answer: c
+Which memory management technique uses variable-sized blocks?
+
+a) Paging
+b) Segmentation
+c) Virtual memory
+d) Cache memory
+Answer: b
+What does the segment table contain in segmentation?
+
+a) Page addresses and frame numbers
+b) Logical addresses and offsets
+c) Base address and length of each segment
+d) CPU cycle details
+Answer: c
+A key disadvantage of segmentation is:
+
+a) Internal fragmentation
+b) External fragmentation
+c) Difficulty in logical grouping
+d) Fixed-sized allocation
+Answer: b
+In segmentation, what is the physical address derived from?
+
+a) Segment number and page offset
+b) Segment number and segment offset
+c) Segment number and frame number
+d) Frame number and page offset
+Answer: b

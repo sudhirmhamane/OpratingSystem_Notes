@@ -1,0 +1,75 @@
+## Virtual Memory->
+
+Virtual Memory is a memory management technique used by operating systems to provide an "idealized abstraction" of the storage resources that allows a computer to compensate for physical memory shortages, by temporarily transferring data from random access memory (RAM) to disk storage. This process creates the illusion of a larger amount of RAM than what is physically available.
+
+Key Concepts of Virtual Memory
+
+Abstraction: Virtual memory allows programs to use more memory than is physically available on the system by abstracting the memory address space. Each process has its own virtual address space.
+
+Paging and Segmentation: Virtual memory systems typically use paging or segmentation to manage memory. Paging divides the virtual memory into fixed-size blocks, while segmentation divides it into variable-sized segments.
+
+Page File/Swap Space: When the physical memory is full, the operating system moves inactive pages of memory to a reserved space on the disk called the page file or swap space. This frees up RAM for active processes.
+
+Demand Paging: Virtual memory can use demand paging, where pages are loaded into RAM only when they are needed, reducing the initial loading time of a program.
+
+Page Fault: When a program accesses a page that is not in physical memory, a page fault occurs, prompting the operating system to load the required page from the disk into RAM.
+
+Benefits of Virtual Memory
+
+Increased Memory Space: Allows more applications to run concurrently by utilizing disk space as additional memory.
+
+Isolation and Protection: Each process operates in its own virtual address space, providing better isolation and protection from other processes.
+
+Efficient Use of Memory: Helps manage memory more efficiently by loading only the necessary parts of programs.
+
+Drawbacks of Virtual Memory
+
+Performance Overhead: Excessive paging (swapping data in and out of disk) can lead to performance degradation, known as thrashing.
+
+Disk Access Speed: Accessing data from disk is significantly slower than accessing it from RAM.
+
+Example
+If a computer has 8 GB of physical RAM but uses virtual memory, it can simulate having 16 GB of RAM by utilizing a portion of the hard drive as virtual memory.
+
+## Key MCQs
+
+What is the main purpose of virtual memory?
+
+a) To increase the physical memory size.
+b) To provide an abstraction of larger memory space.
+c) To allocate CPU time efficiently.
+d) To store data permanently.
+Answer: b
+
+What happens during a page fault?
+
+a) The system crashes.
+b) A required page is not in physical memory and needs to be loaded from disk.
+c) The program runs faster.
+d) Memory allocation is terminated.
+Answer: b
+
+Which technique does virtual memory commonly use to manage memory?
+
+a) Paging
+b) Segmentation
+c) Both a and b
+d) None of the above
+Answer: c
+
+What is the drawback of virtual memory when excessive paging occurs?
+
+a) Memory leakage
+b) Thrashing
+c) Memory overflow
+d) CPU starvation
+Answer: b
+
+In a virtual memory system, each process has its own:
+
+a) Physical address space
+b) Virtual address space
+c) CPU time slice
+d) Disk partition
+Answer: b
+

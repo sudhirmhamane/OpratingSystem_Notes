@@ -1,0 +1,60 @@
+## Deadlock Avoidance:-
+
+Deadlock Avoidance is a technique in operating systems to ensure that a system never enters a deadlock state. Unlike deadlock prevention, which strictly prevents the four conditions for deadlock, deadlock avoidance allows these conditions to exist but carefully manages resource allocation to avoid actual deadlock situations.
+
+# Key Strategy: Banker's Algorithm
+
+One common deadlock avoidance algorithm is the Banker's Algorithm, which:
+
+Ensures each process’s maximum resource needs are known in advance.
+
+Simulates resource allocation in "safe" and "unsafe" states.
+
+Only grants resource requests if the system will remain in a safe state (where processes can still complete without deadlock).
+
+# Concepts in Deadlock Avoidance
+
+Safe State: The system can allocate resources to each process in some order without causing a deadlock.
+
+Unsafe State: There's a possibility of deadlock if resources are allocated in certain sequences.
+
+Example Steps in Banker's Algorithm
+
+Calculate Need: Determine each process's remaining resources needed to complete.
+
+Check for Safe State: Only allocate resources if it leaves the system in a safe state.
+
+# Key MCQs
+
+What is the primary purpose of deadlock avoidance?
+
+a) To detect deadlocks after they occur.
+b) To prevent the system from ever entering a deadlock state.
+c) To resolve deadlocks automatically.
+d) To speed up resource allocation.
+Answer: b
+
+Which algorithm is commonly used for deadlock avoidance?
+
+a) Shortest Job First (SJF)
+b) First Come First Serve (FCFS)
+c) Banker's Algorithm
+d) Round Robin (RR)
+Answer: c
+
+What is a “safe state” in deadlock avoidance?
+
+a) When all processes are blocked.
+b) When the system can allocate resources in a way that avoids deadlock.
+c) When processes request resources simultaneously.
+d) When the CPU usage is below a certain threshold.
+Answer: b
+
+In the Banker's Algorithm, what is calculated to decide if a state is safe?
+
+a) Total CPU time
+b) Available memory
+c) Need of each process
+d) Process priorities
+Answer: c
+

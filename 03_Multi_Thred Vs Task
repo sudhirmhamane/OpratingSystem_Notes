@@ -1,0 +1,72 @@
+## WHAT IS THE MULTI PROGRAMMING?
+    Single processing OS.
+
+    maximum CPU utilization takes place.
+
+    in the mutli programming the context switching takes place.
+
+## WHAT IS THE MULTI TASKING?
+
+    MULTI TASKING is the upgraded version of the MULTI PROGRAMMING.
+    
+    MULTI TASKING is aslo have the one CPU and the context switching is used.
+    
+    The best feacture of the MULTI TASKING is the time sharing.
+
+## WHAT IS THE MULTI PROCESSING?
+
+    MULTI PROCESSING OS is having CPU more than one(2).
+
+    it aslo contains the context switching and the time sharing.
+
+    Due to which the process starvation become less and the CPU utilization increases.
+
+## WHAT IS THE PROGRAM?
+
+    A program is an executable file which contains a certain set of instructions written to comlete the specific job or the operation on the computer.
+
+    it's a compiled code. ready to be excuted.
+
+    it is stored in the Disk.
+
+## WHAT IS THE PROCESS?
+
+    process is program under the execution in the computer's primary memory(RAM).
+
+## WHAT IS THE THRED?
+
+    Thread is the light weight process.
+
+    Thread is like small process inside the process which works independently.
+
+    Threads are the parts of the process.
+
+    Used to achieve parallelism by dividing a proces's task which are independent path of the execution.
+
+    EX: multiple tab in a browser, text editor
+
+
+## WHAT IS THE MULTI THERADING?
+
+    We break the process into the two or multiple threads which works on the same logic and do the work parellely with independently. which save the time as well and work execute instentaly.
+
+    It is not works on the single processing OS or Where the single CPU are available.
+
+    It works on the Multi processing environment means greater than one CPU.
+
+
+## DIFFRENCE BETWEEN THE MUTLI TASKING AND THE MUTLI THEADING?
+
+    1.The execution the of more than one task simultaneously is called as MULTI TASKING.
+    no.of CPU one.
+    1.A process is divided into several different sun-tasks called as a threds,which has it own path of execution. this is called as MULTI THERADING.
+    no.of CPU more than one.
+    
+    2.MULTI TASKING is the more than one process concept.
+    2. MULTI THEADING is the more than one thred concept.
+
+    3.MUTLI TASKING are the within more than one processes so the isolation and memory protection concept is aplied here.
+    3. No isolation and memory protection concept is there in the MUTLI THEADING.
+
+    4.In the MUTLI TASKING the processes are the scheduled.
+    4.In the MULTI THERADING the threds are scheduled.

@@ -1,0 +1,85 @@
+## TYPES OF THE OPERATING SYSTEM ->
+
+## 1. SINGLE PROCESS OS:
+
+This types of OS execute one job at a time if their are multiple jobs are presents so the after the complition of the first job the SINGLE PROCESS OS takes the second job to execute.
+
+It is the oldest OS and do not works on the OS GOALS.
+
+EX: MS DOS.
+
+## 2. BATCH PROCESSING OS:
+
+In this types of the OS the user provide the date in the form of the punch card or prepare his jobs using the punch card.
+
+Then submit the job to the computer operator.
+
+Whatever the data comes from the user that is brute forcely sorted in the similar types of the batches and that batches goes to the OS to execute.
+
+Their is the operater between the user and the OS that sorts the jobs in the batch wise.
+
+this is also a single processing OS.
+
+EX: ATLAS
+
+3. MULTI PROGRAMMING OS:
+
+MULTI PROGRAMMING is also contains single CPU.
+
+In this type the jobs are placed inside the ready queue and they are ready to execute. 
+
+It is also the Single processing OS.
+
+EX: Suppose the Three jobs are there and the job1 is executing and the it goes for the I/O from the USB so that time the job2 will assigned to the CPU and MAXIMUM CPU UTILIZATION takes place.
+
+EX: THE
+
+## CONTEXT SWITCHING:
+
+In this OS the Whatever the process is happening and the jobs are assigning is only because of the CONTEXT SWITCHING.
+
+EX: Let Suppose the CPU has the two jobs p1 and the p2 and CPU stop working on the p1 job and save the current context in the PCB and goes to excute p2 job during the p1 I/O so this is called as context switching.
+
+So the basically during the context switching the state of the p1 jobs is saved in the process control block and the Whatever the p2 job's state is restored by the CPU.
+
+## 4. MULTI TASKING OS:
+
+MULTI TASKING is the upgraded version of the MULTI PROGRAMMING.
+
+MULTI TASKING is aslo have the one CPU and the context switching is used.
+
+The best feacture of the MULTI TASKING is the time sharing.
+
+in this type of OS the job have time quantum so they let suppose excute for the 1000ms and then they not wait for the context switching and the jobs are switches ater the perticular time.
+
+EX: CTSS
+
+It meants the all the goals of the os.
+
+## 5. MULTI PROCESSING OS:
+
+It contains the context switching and the time sharing.
+
+The MULTI PROCESSING OS is having the CPU greater than the one, means it contains the multiple CPU's.
+
+So the memory utilization become fast and starvation process is reduced.
+
+In the case of thIS OS any one of the CPU is face some problems so the another CPU can work and the CPU utilization run continuosly.
+
+EX: WINDOWS,macOS,Linux,IBM z/OS
+
+## 6. DISTRIBUTED OS:
+
+In this type the loosely coupled autonomus computer are working with each other so that are online connected with the internet connection so to handel this types of the computer of the hardware the DISTRIBUTED OS is used.
+
+EX: Microsoft Azure,Apache Hadoop
+
+## 7. RTOS- REAL TIME OPERATING SYSTEM:
+
+RTOS is used in that environment their chances of the error is very less approximately decimal points.
+
+So the example is the AIR control system.
+
+it is used in the industrial application like nuclear plant with less error.
+
+EX: VxWorks,FreeRTOS

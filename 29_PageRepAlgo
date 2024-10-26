@@ -1,0 +1,104 @@
+## Page Replacement Algorithms->
+
+Page Replacement Algorithms are strategies used by operating systems to decide which memory pages to swap out when new pages need to be loaded into physical memory, particularly when the memory is full. The goal is to minimize page faults and maintain optimal system performance.
+
+Common Page Replacement Algorithms
+
+Least Recently Used (LRU):
+
+Description: Replaces the page that has not been used for the longest time. It assumes that pages used recently will likely be used again soon.
+Implementation: Can be implemented using counters or stacks to keep track of page usage.
+
+First-In, First-Out (FIFO):
+
+Description: The oldest page in memory is replaced first. This is simple to implement using a queue.
+
+Drawback: May lead to the Belady's anomaly, where adding more frames results in more page faults.
+
+Optimal Page Replacement:
+
+Description: Replaces the page that will not be used for the longest period in the future. This algorithm provides the best possible page fault rate.
+
+Drawback: It requires future knowledge of page references, making it impractical for real systems.
+
+Least Frequently Used (LFU):
+
+Description: Replaces the page that has been used the least frequently. This algorithm keeps a count of how often each page is accessed.
+
+Drawback: Can be complex to implement and may not respond well to changes in reference patterns.
+
+Second-Chance (Clock):
+
+Description: A modified version of FIFO that gives pages a second chance before replacing them. Each page has a reference bit; if the bit is set, the page is given another chance, and the algorithm moves to the next page.
+
+Implementation: Organized in a circular queue, making it efficient to traverse.
+
+Random Replacement:
+
+Description: A page is selected at random for replacement. This method is simple but may lead to high page fault rates.
+
+## Key MCQs
+
+Which page replacement algorithm replaces the least recently used page?
+
+a) FIFO
+b) LRU
+c) LFU
+d) Random
+Answer: b
+
+What is the primary goal of a page replacement algorithm?
+
+a) To maximize physical memory usage
+b) To minimize page faults
+c) To increase CPU speed
+d) To reduce disk space
+Answer: b
+
+In which page replacement algorithm is the page that will not be used for the longest time chosen for replacement?
+
+a) FIFO
+b) LRU
+c) Optimal
+d) LFU
+Answer: c
+
+What problem can occur with the FIFO page replacement algorithm?
+
+a) Page thrashing
+b) Belady's anomaly
+c) Fragmentation
+d) High latency
+Answer: b
+
+Which of the following page replacement algorithms is the simplest to implement?
+
+a) LRU
+b) LFU
+c) FIFO
+d) Optimal
+Answer: c
+
+Which page replacement algorithm gives pages a "second chance" before replacement?
+
+a) FIFO
+b) LRU
+c) Second-Chance
+d) LFU
+Answer: c
+
+In the LFU page replacement algorithm, which page is replaced?
+
+a) The most recently used page
+b) The least frequently used page
+c) The oldest page
+d) The randomly chosen page
+Answer: b
+
+What is a drawback of the Optimal page replacement algorithm?
+
+a) It is very slow.
+b) It requires future knowledge of references.
+c) It does not replace any pages.
+d) It causes page thrashing.
+Answer: b

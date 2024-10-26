@@ -1,0 +1,89 @@
+## how the program creates?
+
+    in the java we write the code inn the text type and create a file with the extension .java.
+
+    then the code is goes to the compiler which compailes the code.
+
+    after that the code goes to the execution.
+
+    so this execution is called as the program.
+
+Program is a ready to execute file.
+
+Program is availabel in the disk.
+
+## Program under the execution is called as the Process.
+
+## Why the process?
+
+    because the user have some work or the job to do so process is the way to execute that work or the job.
+
+## How OS crates a Process
+
+    1. the OS loads the Program and the static data to memory.
+
+    the static data is used for the initalization.
+
+    2. Allocate Runtime Stack.
+     
+     Stack is the part of the memory used to for the local variables and the function argumets and the return values.
+
+     stack is used for the recusion enabling and the function calls.
+    
+    3. Allocate Heaps:
+
+    heap is the part of the memory used for the dynamic allocation.
+
+    Heaps is the dynamic data.
+
+    4. I/O tasks:
+
+     after the three steps the 3 types of the i/o discript is form.
+
+     for the input and the output discript the i/o handel is used.
+
+     output handle is for the allocating the output.
+
+     and the last is the error handler to handel the errors.
+
+    5. in the coding of the java the execution starts from the main() because the OS only know the OS function.The OS hand over the further execution to the main() function.
+
+    in the program we write the return 0; so the OS know that the code or the execution is happened successfuly without any error.
+
+## Archtecuture of the process->
+
+    1.text
+        in the text the compailed code is present.
+
+    2. data
+        in the data the Global and the Static data is avialable.
+
+    3. heap
+       at the starting of the program execution the heap and the stack are both far away from each others to execute the program.
+
+       in the heap the "out of memory" error is happes when the user allocate the heaps frequently and not free them and it goes to touch the stack so the OS throw the above error. 
+
+
+    4. stack
+
+        during the execution of the program it the user makes some mistake in the program or the base case is not mentioned so the stack is goes increasing and increasing and the stack come near to the heaps so the memory damage dont happes the OS throw the error "Stack overflow".
+
+## Attibutes of the Process->
+
+    Diffrent types process, The OS write down it in the form of the table in sequencwise.
+
+    The each entry of the process table is the process contol block.
+
+    PCB is the data structure which store the all the data related to the process.
+
+    PCB Contains the following types
+
+        1. Process ID
+        2. Program Counter
+        3. process state
+        4. Pririty 
+        5. Register
+        6. Open File List
+        7. Open Dencer List
+
+

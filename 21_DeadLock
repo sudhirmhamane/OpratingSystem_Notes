@@ -1,0 +1,115 @@
+## Deadlock->
+
+A deadlock is a situation in computer systems where a set of processes is blocked because each process is holding a resource and waiting for another resource held by another process. This creates a cycle of dependencies, causing all involved processes to wait indefinitely and preventing any of them from proceeding.
+
+## Conditions for Deadlock
+
+A deadlock can only occur if all four of these conditions are met:
+
+Mutual Exclusion: Only one process can use a resource at a time.
+
+Hold and Wait: Processes holding resources can request additional ones.
+
+No Preemption: Resources cannot be forcibly removed from a process holding them.
+
+Circular Wait: A cycle of processes exists, where each process waits for a resource held by the next in the cycle.
+
+# Avoiding Deadlock
+
+Deadlocks can be prevented by ensuring that at least one of the four conditions doesn’t hold.
+
+# Techniques include:
+
+Resource Allocation Order: Enforce an order in which processes request resources.
+
+Deadlock Detection and Recovery: Regularly check for deadlocks and take corrective action if detected.
+
+Deadlock Prevention: Use algorithms to allocate resources in a way that avoids deadlock.
+
+# Key MCQs
+
+What is a deadlock in computer systems?
+
+a) A state where all resources are fully utilized.
+b) A condition where a set of processes are stuck waiting for resources held by each other.
+c) A situation where resources are idle.
+d) A problem only in single-threaded systems.
+Answer: b
+
+Which condition is NOT necessary for a deadlock to occur?
+
+a) Circular Wait
+b) No Preemption
+c) Hold and Wait
+d) Multiple CPUs
+Answer: d
+
+What is one way to prevent deadlock?
+
+a) Allow processes to request resources in any order.
+b) Use a preemption strategy.
+c) Allow circular wait.
+d) Ensure mutual exclusion.
+Answer: b
+
+Which of the following is a method to detect deadlock?
+
+a) Process Scheduling
+b) Resource Allocation Graph
+c) Paging
+d) Priority Scheduling
+Answer: b
+
+
+## Resource Allocation Graph (RAG)->
+
+A Resource Allocation Graph (RAG) is a graphical representation used to model the allocation of resources to processes in an operating system. It helps visualize the relationships between processes and resources, aiding in detecting potential deadlocks.
+
+Key Components of a RAG
+
+Nodes:
+
+Process Nodes: Represented as circles and denote active processes.
+Resource Nodes: Represented as squares and denote resources required by processes.
+
+Edges:
+
+Request Edge: A directed edge from a process node to a resource node (P → R), indicating that the process is requesting that resource.
+
+Assignment Edge: A directed edge from a resource node to a process node (R → P), indicating that the resource is allocated to the process.
+
+Deadlock Detection
+
+In a RAG:
+
+Cycle Detection: If the graph has a cycle, it indicates a potential deadlock.
+
+Single Instance of Each Resource: A cycle means a deadlock.
+
+Multiple Instances of Resources: A cycle may not necessarily mean a deadlock, so further analysis is needed.
+
+## Key MCQs
+
+What does a Resource Allocation Graph represent?
+
+a) The CPU usage of processes.
+b) The allocation of resources to processes.
+c) The memory allocation of each process.
+d) The scheduling order of processes.
+Answer: b
+
+In a Resource Allocation Graph, what does a request edge from process P to resource R signify?
+
+a) Process P is holding resource R.
+b) Process P has released resource R.
+c) Process P is requesting resource R.
+d) Process P is waiting for all other resources.
+Answer: c
+
+What does a cycle in a Resource Allocation Graph indicate?
+
+a) Process termination.
+b) Deadlock potential.
+c) Immediate deadlock.
+d) Process preemption.
+Answer: b

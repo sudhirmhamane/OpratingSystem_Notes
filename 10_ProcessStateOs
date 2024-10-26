@@ -1,0 +1,35 @@
+## Process State->
+
+Process state is the life cycle from the process Generation to the Termination.
+
+    1> New State->
+        New state is the when the program is converting into the process.
+    
+    2> Ready State->
+        The Ready State is when the Process is created and the process is taken to the memory.
+
+        It is like the Ready Queue.
+    
+    3> Running State->
+
+        Running state is that the process get the cpu from the ready state and it is executing.
+    
+    4> Waiting State->
+
+        when the proces in the running state the i/o opration comes so then the process goes to the waiting state.
+    
+    5> Terminated State:
+        in this State the process is finish and execuated.
+
+
+## Two Types of Schedular->
+
+    1> Job Schedular(LTS)
+        Job Schedular pecke the process fro the pule and put the process in the ready state.
+
+        the idea time of the this schedular is more and it not operated in the high frequency.
+
+    2> CPU Schedular(STS)
+        From the ready stete to the runnig state the CPU schedular do that thing.
+
+        CPU is called as the shot term schedular beacuse the the idea time between this is very less and it oprate on the high frequency.

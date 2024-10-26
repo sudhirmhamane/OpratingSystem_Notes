@@ -1,0 +1,87 @@
+## Shortest Job First (SJF)->
+
+ is a process scheduling algorithm that selects the process with the smallest execution time (burst time) to run next. Here’s a quick overview:
+
+Key Points about SJF
+Definition: SJF schedules processes based on their burst time, favoring shorter tasks first.
+
+How It Works:
+
+The process with the smallest burst time is executed next.
+If two processes have the same burst time, they can be scheduled in the order they arrive (FIFO).
+Types:
+
+Preemptive SJF: If a new process arrives with a shorter burst time than the currently running process, it preempts (interrupts) the current process.
+
+Non-preemptive SJF: Once a process starts running, it cannot be interrupted until it completes.
+
+Advantages:
+
+Reduces average waiting time and turnaround time for a set of processes.
+Efficient for batch processes where execution times are known.
+
+Disadvantages:
+
+Can cause starvation: Longer processes may wait indefinitely if shorter ones keep arriving.
+Not practical for all scenarios, especially when burst times are unknown.
+Example
+For three processes with burst times:
+
+Process	Burst Time
+P1	        6
+P2	        8
+P3	        4
+Execution Order: P3 → P1 → P2 (P3 runs first because it has the shortest burst time).
+
+In summary, SJF is an efficient scheduling method that prioritizes shorter tasks, reducing overall waiting time, but it may lead to starvation for longer processes.
+
+
+## Priority scheduling 
+
+in operating systems assigns tasks to be executed based on their priority. Tasks with higher priority are processed before those with lower priority, leading to more efficient and fair processing.
+
+## Round Robin (RR)->
+
+ is a widely used CPU scheduling algorithm that assigns each process a fixed time slice (or "quantum") to run. Here’s a quick overview:
+
+Key Points about Round Robin Scheduling
+
+Definition: Round Robin schedules processes in a cyclic order, giving each process an equal share of the CPU for a set time quantum.
+
+How It Works:
+
+Each process is given a fixed time quantum (e.g., 5 ms).
+If a process finishes within its time slice, it’s removed from the queue.
+
+If it doesn’t finish, it goes to the end of the queue, and the next process runs.
+
+This cycle repeats, ensuring all processes get a chance to execute.
+
+Characteristics:
+
+Fairness: Each process gets equal CPU time, preventing any one process from monopolizing the CPU.
+Preemptive: If a process exceeds its time quantum, it is preempted (paused) and moved to the end of the queue.
+
+Advantages:
+
+Responsive for interactive systems, as each process gets frequent CPU time.
+Prevents starvation (all processes get a chance to run).
+
+Disadvantages:
+
+Higher Overhead: Frequent context switching can slow down performance.
+Quantum Selection: If the time quantum is too short, there’s excessive context switching; if it’s too long, response time suffers.
+
+Example
+Consider three processes with these burst times and a time quantum of 4 ms:
+
+Process	Burst Time
+P1	        5
+P2	        8
+P3	        3
+Execution Order:
+
+First Round: P1 (4 ms), P2 (4 ms), P3 (3 ms; completes).
+Second Round: P1 (1 ms; completes), P2 (4 ms; completes).
+
+In summary, Round Robin is ideal for fair, responsive scheduling, especially in interactive systems, by cycling through processes with a fixed time quantum.

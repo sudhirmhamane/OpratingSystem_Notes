@@ -1,0 +1,56 @@
+## WHY OS IS USED?
+
+1. Resoure management by the OS.
+2. OS acts as a interface between the user and the computer hardware.
+3. Without using the OS the app or the application becomes Bulky.
+4. it handel the essues of the memory management.
+5. it also work on the isolation and the protection management.
+
+## OPERATING SYSTEM ->
+
+OPERATING SYSTEM is the piece of software that managesa all the resourses of the computer system.both the software and the hardware and provide an environment in which the user can execute the his programs.By handling the underlying the complexity of the hardware and acting as a resourse manager.
+
+## GOALS OF THE OPERATING SYSTEM ->
+
+1. MAXIMUM CPU UTILIZATION:
+
+EX: if the CPU has the 3 works W1,W2 and the W3 so when the W1 is under the working and it goes to do some I/O work so at that time CPU must work with the other jobs.
+
+2. LESS PROCESS STARVATION:
+
+EX: when the CPU has the 3 jobs to do and the job1 takes so much time and not finish early so the remaining jobs are not done so this is called as PROCESS STARVATION.
+
+3. HIGH PRIORITY EXECUTION:
+
+EX: if the CPU is processing some job and the suddenly the one argent job or important job comes so the CPU must take that job and complete it. means the CPU process on the basic of the HIGH job PRIORITY.
+
+## TYPES OF THE OPERATING SYSTEM ->
+
+1. SINGLE PROCESS OS:
+EX: MS DOS.
+
+2. BATCH  PROCESSING OS:
+EX: ATLAS
+
+3. MULTI PROGRAMMING OS:
+EX: THE
+
+CONTEXT SWITCHING:
+
+In this OS the Whatever the processing is happening and the jobs are assigning is only because of the CONTEXT SWITCHING.
+
+EX: Let Suppose the CPU has the two jobs p1 and the p2 and CPU stop working on the p1 and save the current context in the PCB and goes to excute p2 job during the p1 I/O so this is called as context switching.
+
+So the basically during the context switching the state of the p1 jobs is saved in the process control block and the Whatever the p2 job's state is restored by the CPU.
+
+4. MULTI TASKING OS:
+EX: CTSS
+
+5. MULTI PROCESSING OS:
+EX: WINDOWS,macOS,Linux,IBM z/OS
+
+6. DISTRIBUTED OS:
+EX: Microsoft Azure,Apache Hadoop
+
+7. RTOS- REAL TIME OPERATING SYSTEM:
+EX: VxWorks,FreeRTOS

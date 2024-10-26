@@ -1,0 +1,22 @@
+# What is Concurrency?
+
+Concurrency enables a system to handle multiple tasks in overlapping time frames by switching between them, even if they’re not running at the exact same moment. This creates the appearance of tasks being processed simultaneously, especially on a single-core CPU where true simultaneous execution isn’t possible.
+
+How It Works
+
+Time-Slicing: Tasks share CPU time by taking turns in short time slices. This is managed by the operating system through context switching, where the CPU shifts from one task to another.
+
+Threads and Processes: Concurrency is often achieved using threads (lightweight sub-units within a process) or multiple processes. Threads can share memory space, which makes communication easier and faster.
+
+Advantages of Concurrency
+
+Increased Efficiency: By overlapping tasks, systems make better use of CPU time and resources.
+
+Improved Responsiveness: Applications, like user interfaces, stay responsive by working on different tasks in the background.
+
+Example
+
+Consider downloading a file while typing in a text editor. These tasks can progress concurrently without one blocking the other.
+
+In Summary
+Concurrency enables multitasking by interleaving the execution of tasks, making applications faster and more efficient without needing multiple CPUs.

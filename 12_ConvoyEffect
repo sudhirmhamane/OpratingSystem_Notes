@@ -1,0 +1,117 @@
+## convoy effect:
+
+The convoy effect is a phenomenon that occurs in operating systems, particularly in process scheduling and resource management. Here’s a brief overview:
+
+What is the Convoy Effect?
+
+Definition: The convoy effect happens when a group of processes (or tasks) becomes stuck waiting for resources, causing some of them to experience delays in execution. This often leads to a situation where a few processes (the “leaders” of the convoy) block others, creating inefficiency.
+
+How It Works:
+
+In a system where processes have varying execution times, shorter processes may have to wait for longer ones to finish because they share the same resources (like CPU or I/O devices).
+
+As a result, multiple shorter processes end up waiting for the longest-running process to complete, creating a bottleneck.
+
+Implications:
+
+Increased Wait Times: Shorter processes suffer from increased wait times, leading to poor system performance and responsiveness.
+
+Resource Underutilization: System resources may not be fully utilized, as some processes are held up while waiting for others to complete.
+
+Example: Consider a scenario where several small tasks are waiting for a large task to complete. The small tasks may be delayed significantly, creating a "convoy" of waiting processes behind the large one.
+
+Solutions:
+
+Improved Scheduling Algorithms: Using priority scheduling or round-robin scheduling can help minimize the convoy effect by allowing shorter processes to execute more quickly.
+
+Resource Allocation: Managing resource allocation more efficiently can reduce the chances of the convoy effect occurring.
+
+
+## Process scheduling->
+
+
+Process scheduling is the method by which an operating system decides the order in which processes are executed. It plays a crucial role in multitasking environments, allowing multiple processes to share the CPU efficiently. Here’s a brief overview:
+
+What is Process Scheduling?
+Definition: Process scheduling is the mechanism that determines which process runs at any given time, managing the execution of processes in a system.
+
+Goals:
+
+Maximize CPU Utilization: Keep the CPU busy with processes as much as possible.
+Minimize Turnaround Time: Reduce the total time taken to execute a process from submission to completion.
+Minimize Waiting Time: Decrease the time processes spend waiting in the ready queue.
+Ensure Fairness: Provide each process a fair share of CPU time.
+
+Types of Scheduling:
+
+Long-term Scheduling: Decides which processes are admitted to the system for processing. It controls the degree of multiprogramming.
+
+Short-term Scheduling: Selects which of the ready processes will execute next. This is done frequently and directly affects CPU utilization.
+
+Medium-term Scheduling: Manages the swapping of processes in and out of memory, balancing the number of processes in memory to optimize performance.
+
+## Scheduling Algorithms:
+
+First-Come, First-Served (FCFS): Processes are scheduled in the order they arrive.
+
+Shortest Job Next (SJN): Selects the process with the smallest execution time.
+
+Round Robin (RR): Each process is assigned a fixed time slice to execute, cycling through all ready processes.
+
+Priority Scheduling: Processes are scheduled based on priority levels; higher priority processes are executed first.
+
+Impact: Effective process scheduling improves system performance, responsiveness, and user experience by managing how processes compete for CPU time.
+
+In summary, process scheduling is a key function of operating systems, allowing multiple processes to be executed efficiently while maximizing resource utilization and minimizing wait times.
+
+## FCFS ->>
+
+First-Come, First-Served (FCFS) is one of the simplest scheduling algorithms used by operating systems for managing processes. Here’s a concise overview:
+
+What is FCFS Scheduling?
+Definition: FCFS is a non-preemptive scheduling algorithm where processes are executed in the order they arrive in the ready queue. The first process that arrives is the first one to be executed.
+
+How It Works:
+
+Processes are added to the ready queue as they arrive.
+The CPU scheduler selects the process at the front of the queue for execution.
+Once a process starts executing, it runs to completion without being interrupted.
+Characteristics:
+
+Simplicity: Easy to implement and understand.
+
+Fairness: Each process gets a chance to execute based on its arrival time.
+
+Performance Metrics:
+
+Turnaround Time: The total time taken from submission to completion. It can be high, especially for shorter processes that wait for longer ones to finish.
+
+Waiting Time: The total time a process spends in the ready queue before execution. This can also be significant for processes that arrive after longer ones.
+
+Advantages:
+
+Simple and easy to implement.
+No starvation: Every process eventually gets executed.
+
+Disadvantages:
+
+Convoy Effect: Shorter processes may wait a long time behind longer processes, leading to inefficiency.
+
+Poor Average Waiting Time: Particularly for a mix of long and short processes, as shorter ones can experience excessive delays.
+
+Example
+Consider three processes with the following arrival and burst times:
+
+Process	Arrival Time  Burst Time
+P1	        0	           4
+P2	        1	           2
+P3	        2	           1
+Execution Order:
+
+P1 runs from time 0 to 4.
+P2 runs from time 4 to 6.
+P3 runs from time 6 to 7.
+
+Summary
+
+FCFS is a straightforward scheduling method that treats all processes equally based on their arrival time. While it’s easy to implement, it may lead to inefficiencies, especially in environments with varying process lengths.

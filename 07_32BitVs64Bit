@@ -1,0 +1,24 @@
+## 32Bit->
+
+32Bit allocate the 2^31 address.
+
+in the 32Bit Os the Addresable spaces is very less compared to the 64Bit.
+
+In the 32BIt the resource user are very less.
+
+performance wise it not better than the 64Bit OS.
+
+## 64Bit->
+
+It having more addresable space 2^63.
+
+The resource usage is more comapred to the 32Bit.
+
+It is having more compatibility.
+
+Better Graphic performance is there.
+
+64Bit allocate the 2^63 address
+
+1 byte = 8 bit 
+

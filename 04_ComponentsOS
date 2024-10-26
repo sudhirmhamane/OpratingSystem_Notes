@@ -1,0 +1,89 @@
+Basically there are the two OS components 
+1. User Space
+2. Kernal
+
+## GUI: (Graphical User Interface)
+    Whenever we open the windows the whatever the content appear in front us that is called as GUI-(Graphical User Interface).
+
+## CLI: (Command Line Interface)
+    The whatever the command we run on the terminal or power shell on the windows that is know as the CLI-(Command Line Interface).
+
+## USER SPACE ->
+
+    User Space don't have the access of the hardware of the computer.
+
+    It Provide Convient environment to the user apps.
+
+    It Interacts with the Kernal.
+
+##  KERNAL ->
+
+    The Kernal is the heart of the OS.
+
+    It directly Interacts with hardware.
+
+    User have to give the command to the kernal and then the kernal see the command and do the work form the hardware.
+
+## FUNCTIONS OF THE KERNAL->
+
+    1.Process Management:
+        
+        ~ Process creation,termination
+        ~ Process and Thread Schedule.
+        ~ It does the Context Switching.
+        ~ It does the process Synchronization.
+        ~ It does the process communication.
+
+    2.Memory Management:
+
+        ~ It does Memory Alocate/Dealocate.
+        ~ Free Space Management
+
+    3.File Management:
+
+        ~ It create and delete the file.
+        ~ It does the directory Management.
+
+    4. I/O Management:
+
+        ~ manage and control all the I/O devices.
+        ~ Spooling
+        ~ Buffering
+        ~ Caching
+
+## in the OS components there are the two mode present one is the User mode and second is the Kernal mode so in this two modes the swithcing takes place.
+
+## This switching is happens due to the software interrupts.
+
+## TYPES OF THE KERNAL->
+
+    1.Monolithic Kernal:
+
+        ~ In Monolithic Kernal Whatever the Four Fucntion are there that all present in the kernal mode so that is know as the monolithic kernal.
+        ~ It is one of the oldest type of the Kernal.
+        ~ Due to available in the one space the fast communications happens b/t the components of the Mnolithic kernal.
+        ~ due to this the kernal becomes more bulky and this is the disadv of the mono kernal.
+        EX: Linux,Unix and MSDOS.
+
+    2. Micro Kernal:
+
+        ~ Where the major functionality which are more required and the hardware intereaction is high so that all components are present in the kernal mode and all other components are implemented in the User Space.
+        ~ It is Less bulky than the mono Kernal.
+        ~ More Reliable.
+        ~ More Stable.
+        ~ But the performance become less.
+        EX: L4 Linux,Symbian OS
+
+    3. Hybride Kernal:
+
+        ~ It has the Combined advatages of the first both Kernals.
+        ~ So in this type the only file mgnt is placed inside the User Mode and all other components are placed inside the kernal mode.
+        ~ Due to this the switching between the user space and the kernal mode.
+
+
+## HOW DOES THE COMMUNICATION HAPPENS BETWEEN THE USER MODE AND THE KERNAL MODE?
+
+    The Communication happens between the user and kernal mode is through the IPC InterProcess-Communication.
+
+    So the IPC is divided into the Two methods and the IPC is happens through the Shared Memory and the Message passing and both the methods are supported into the diffrent sinario.
+

@@ -1,0 +1,55 @@
+## Reader-Writer Problem
+
+The Reader-Writer Problem is a classic synchronization issue where multiple processes (or threads) need to access shared data. The goal is to allow multiple readers to read simultaneously but prevent writers from accessing the data at the same time as readers or other writers, as writing can alter the data.
+
+Solution
+To solve this, we use semaphores:
+
+Read Count: Tracks the number of readers.
+Mutex: Ensures exclusive access when updating the read count.
+Write: A semaphore that allows only one writer or blocks readers when a writer is accessing the data.
+Solution Outline
+Readers:
+
+Lock the mutex to safely update read count.
+If the first reader enters, it locks the write semaphore.
+Unlock mutex and read the data.
+After reading, lock mutex again to update read count. If the last reader leaves, release write.
+Writers:
+
+Wait on write to get exclusive access.
+Write to the data and release write afterward.
+
+Key MCQs
+
+## What is the main goal of the Reader-Writer Problem?
+
+a) To allow multiple writers to write simultaneously.
+b) To allow readers and writers to read and write simultaneously.
+c) To allow multiple readers to read at the same time but restrict writers.
+d) To prevent any access to shared data.
+Answer: c
+
+## In the Reader-Writer Solution, what does the write semaphore do?
+
+a) Allows multiple readers to read at once.
+b) Ensures only one writer accesses the data at a time.
+c) Counts the number of readers.
+d) Signals when a writer can access the data.
+Answer: b
+
+## Why is the mutex semaphore used in the Reader-Writer Problem?
+
+a) To control access to the write semaphore.
+b) To update the read count safely.
+c) To block all readers.
+d) To track the number of writers.
+Answer: b
+
+## What condition must be met for the first reader to enter the critical section?
+
+a) Write semaphore must be free.
+b) All writers must be in a waiting state.
+c) Read count must be zero.
+d) All readers must have left the critical section.
+Answer: a

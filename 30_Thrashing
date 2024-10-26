@@ -1,0 +1,75 @@
+## Thrashing->
+
+Thrashing is a situation in a computer system where excessive paging or swapping occurs, leading to a significant degradation in system performance. It happens when the operating system spends more time transferring pages in and out of memory than executing actual processes.
+
+Causes of Thrashing
+
+Insufficient Memory: When the total memory demand of all running processes exceeds the available physical memory, causing frequent page faults.
+
+High Degree of Multiprogramming: Running too many processes simultaneously can lead to increased memory pressure.
+
+Poorly Designed Algorithms: Inefficient page replacement algorithms may exacerbate the problem.
+
+Effects of Thrashing
+
+Increased Latency: Programs become slow and unresponsive due to constant paging.
+
+Decreased Throughput: The overall system throughput drops as the CPU spends more time handling page faults rather than executing instructions.
+
+Resource Starvation: Processes may not receive enough resources to make progress.
+
+Example of Thrashing
+
+Consider a system with 4 GB of RAM running several memory-intensive applications that collectively require 10 GB of memory. As the OS tries to keep all the applications running, it continuously swaps pages in and out of RAM, causing a high rate of page faults. The system may become so slow that it appears to be frozen or unresponsive.
+
+Prevention and Solutions
+
+Increase Physical Memory: Adding more RAM can alleviate thrashing.
+
+Reduce Multiprogramming: Limit the number of processes running concurrently to ensure enough memory for each.
+
+Use Better Page Replacement Algorithms: Implementing efficient algorithms can reduce the frequency of page faults.
+
+Adjust the Working Set: The OS can track the "working set" of pages a process needs and keep those in memory to reduce swapping.
+
+## Key MCQs
+
+What is thrashing?
+
+a) Excessive CPU usage
+b) Excessive paging leading to poor performance
+c) Insufficient memory allocation
+d) Fast processing of tasks
+Answer: b
+
+Which of the following is a cause of thrashing?
+
+a) High CPU speed
+b) Sufficient memory allocation
+c) Running too many processes simultaneously
+d) Efficient page replacement algorithms
+Answer: c
+
+What is the effect of thrashing on system performance?
+
+a) Increased throughput
+b) Decreased latency
+c) Increased latency and decreased throughput
+d) No effect
+Answer: c
+
+Which of the following solutions can help prevent thrashing?
+
+a) Decrease physical memory
+b) Increase the number of processes
+c) Implement better page replacement algorithms
+d) Reduce CPU usage
+Answer: c
+
+What happens when thrashing occurs?
+
+a) Programs run faster
+b) The system becomes unresponsive
+c) Memory is fully utilized
+d) There is no impact on performance
+Answer: b

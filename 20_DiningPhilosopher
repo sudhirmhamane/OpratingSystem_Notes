@@ -1,0 +1,93 @@
+## The Dining Philosophers->
+
+Problem is a classic synchronization problem that illustrates the difficulties of avoiding deadlock and resource contention in concurrent programming. In this problem:
+
+Five philosophers sit around a circular table, alternating between thinking and eating.
+
+Between each pair of philosophers, there is a single chopstick.
+Each philosopher needs two chopsticks (one from the left, one from the right) to eat.
+
+The challenge is that if each philosopher picks up one chopstick, they could all end up holding one and waiting indefinitely for the other, leading to deadlock.
+
+## Solutions to Avoid Deadlock
+
+Resource Hierarchy: Philosophers can only pick up their left chopstick if the right one is available, breaking the cycle that causes deadlock.
+
+Limit Entry: Allow only up to four philosophers to pick up chopsticks at a time, ensuring at least one philosopher can access both chopsticks.
+
+Chandy/Misra Solution: Philosophers only pick up both chopsticks at the same time or not at all, preventing partial hold on resources.
+
+## Key MCQs
+
+What is the main issue in the Dining Philosophers Problem?
+
+a) Ensuring philosophers think at the same time.
+b) Managing shared chopsticks to avoid deadlock.
+c) Making philosophers eat continuously.
+d) Giving each philosopher a personal set of chopsticks.
+Answer: b
+
+What can cause deadlock in the Dining Philosophers Problem?
+
+a) Philosophers picking up both chopsticks at once.
+b) Each philosopher holding one chopstick and waiting for the other.
+c) All philosophers thinking at the same time.
+d) Philosophers eating in a round-robin order.
+Answer: b
+
+What is a common solution to prevent deadlock in this problem?
+
+a) Allowing philosophers to take turns eating.
+b) Limiting the number of philosophers that can hold a chopstick at once.
+c) Ensuring philosophers think continuously.
+d) Giving each philosopher a unique set of chopsticks.
+Answer: b
+
+## Semaphore->
+
+A semaphore is a synchronization tool used in operating systems to manage access to shared resources by multiple threads or processes. It is essentially a counter that controls how many processes can access a resource at a time. Semaphores help prevent race conditions, deadlocks, and resource conflicts in concurrent programming.
+
+There are two main types of semaphores:
+
+Binary Semaphore (or Mutex): It has only two values, 0 and 1, and is used to allow only one process or thread to access a resource at a time.
+
+Counting Semaphore: It can have a range of values, allowing a specific number of processes to access the resource simultaneously.
+
+## How it Works
+Wait (P operation): Decreases the semaphore value. If the value becomes negative, the process is blocked until another process releases the resource.
+
+Signal (V operation): Increases the semaphore value, signaling that a process has released the resource.
+
+## Key MCQs
+
+What is the primary purpose of a semaphore in an operating system?
+
+a) To increase process speed.
+b) To control access to shared resources.
+c) To reduce memory usage.
+d) To schedule processes in a queue.
+Answer: b
+
+What does a binary semaphore allow?
+
+a) Multiple processes to access a resource at the same time.
+b) Only one process to access a resource at a time.
+c) Dynamic scheduling of processes.
+d) Unlimited access to resources.
+Answer: b
+
+What happens when a process performs a ‘wait’ operation on a semaphore?
+
+a) The semaphore value increases.
+b) The semaphore value decreases.
+c) The process is terminated.
+d) The process is scheduled for execution.
+Answer: b
+
+Which type of semaphore can handle multiple resources?
+
+a) Binary semaphore
+b) Counting semaphore
+c) Integer semaphore
+d) None of the above
+Answer: b

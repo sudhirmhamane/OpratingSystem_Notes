@@ -1,0 +1,118 @@
+## Multilevel Queue Scheduling->
+
+ is a process scheduling algorithm that divides processes into multiple queues based on their priority or type, with each queue having its own scheduling policy. Here’s a simple breakdown:
+
+Key Points about Multilevel Queue Scheduling
+
+Definition: Multilevel Queue Scheduling organizes processes into separate queues based on characteristics like priority, process type (e.g., system vs. user processes), or memory needs.
+
+How It Works:
+
+Processes are assigned to a specific queue at the time of creation and remain in that queue.
+
+Each queue can have its own scheduling algorithm, such as First-Come, First-Served (FCFS) or Round Robin.
+
+The operating system schedules processes based on queue priority, typically handling higher-priority queues first.
+
+Types of Queues:
+
+System Processes: For high-priority tasks like kernel processes.
+
+Interactive Processes: For user applications that need faster 
+response times.
+
+Batch Processes: For longer, non-interactive tasks with lower priority.
+
+Scheduling:
+
+Inter-Queue Scheduling: Specifies the priority order of the queues.
+
+Higher-priority queues are served before lower-priority ones.
+
+Intra-Queue Scheduling: Specifies the scheduling algorithm within each queue (e.g., FCFS in the system queue and Round Robin in the interactive queue).
+
+Advantages:
+
+Flexibility: Allows different scheduling policies for different types of processes.
+
+Efficiency: Improves system performance by categorizing processes based on priority.
+
+Disadvantages:
+
+Complexity: More complex to manage than single-queue scheduling.
+Starvation: Lower-priority queues may wait indefinitely if higher-priority queues are always busy.
+
+Example
+A system might have three queues:
+
+Queue 1: High-priority system processes (scheduling with FCFS).
+Queue 2: Interactive user processes (scheduling with Round Robin).
+Queue 3: Batch processes (scheduling with FCFS).
+
+The system will first complete tasks in Queue 1, then move to Queue 2, and finally to Queue 3 if the higher-priority queues are idle.
+
+In summary, Multilevel Queue Scheduling is a flexible approach that organizes processes by type or priority into multiple queues, each with its own scheduling rules, ensuring efficient handling of various process types.
+
+
+## Multilevel Feedback Queue Scheduling->
+
+is a flexible scheduling method where processes can move between multiple queues with different priority levels. It adjusts process priority based on their behavior, like how long they’ve been running or waiting.
+
+How It Works:
+
+Processes start in a high-priority queue.
+
+If a process uses too much CPU time, it’s moved to a lower-priority queue.
+
+Shorter or interactive tasks stay in higher-priority queues.
+
+Processes can “move up” if they wait too long, balancing fairness.
+
+Benefits:
+
+Adapts to different types of processes.
+
+Prevents starvation by giving long-waiting processes a chance.
+
+Drawback: 
+
+More complex to manage due to constant priority adjustments.
+
+
+## Preemption and Non-Preemption->
+
+are two scheduling approaches in operating systems:
+
+## Preemption
+
+Definition: The operating system can interrupt or pause a running process to switch to another process.
+
+Example: Round Robin scheduling.
+
+Benefit: Allows quick response for higher-priority tasks, suitable for multitasking.
+
+
+## Non-Preemption
+
+Definition: Once a process starts executing, it runs until it completes or voluntarily yields.
+
+Example: First-Come, First-Served (FCFS).
+
+Benefit: Simpler and no need for frequent switching, but can lead to longer wait times for other processes.
+
+In short, preemptive scheduling interrupts processes for better responsiveness, while non-preemptive scheduling lets processes run to completion.
+
+## Overhead->
+
+in computing refers to the extra resources (like time, memory, or CPU cycles) required to manage and support operations, but not directly part of the main task.
+
+Key Points
+
+Example: Context switching in multitasking adds overhead because it uses CPU time to switch between processes instead of running them.
+
+Types:
+Time Overhead: Extra time for managing tasks (e.g., loading processes).
+Memory Overhead: Additional memory used for managing data.
+
+In Short
+Overhead is the extra resource cost of running processes or tasks, often necessary for system management but not directly productive.

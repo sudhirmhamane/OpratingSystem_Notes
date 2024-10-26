@@ -1,0 +1,61 @@
+## Memory Management in Operating Systems->
+
+Memory Management in an operating system (OS) is responsible for handling and coordinating computer memory, ensuring efficient allocation and deallocation of memory for processes. It helps in maximizing system performance by organizing memory space in a way that all processes get the required memory while optimizing CPU and memory usage.
+
+# Key Concepts
+
+Main Memory: The area where processes and data are stored during execution. The OS manages this memory to avoid conflicts and optimize performance.
+
+Processes Allocation and Deallocation: The OS allocates memory to processes when they need it and frees it when the processes are completed.
+
+# Segmentation and Paging:
+
+Segmentation: Divides memory into variable-sized segments based on program structure (e.g., code, data, stack).
+
+Paging: Divides memory into fixed-size blocks (pages and frames) to avoid fragmentation and facilitate faster access.
+
+Virtual Memory: Extends the memory available by using a portion of the hard drive as additional memory, allowing systems to run larger applications than the actual physical memory.
+
+Memory Swapping: Moving processes in and out of memory to optimize space and CPU usage.
+
+# Goals of Memory Management->
+
+Efficient Memory Utilization: Maximize the use of available memory.
+
+Isolation and Protection: Ensure processes don't interfere with each other's memory.
+
+Multitasking Support: Enable multiple processes to run simultaneously.
+
+# Key MCQs
+
+What is the primary role of memory management in an OS?
+
+a) Controlling the CPU speed.
+# b) Allocating and managing memory space for processes.
+c) Managing network protocols.
+d) Controlling user interface design.
+Answer: b
+
+What technique divides memory into fixed-size blocks?
+
+a) Segmentation
+# b) Paging
+c) Swapping
+d) Caching
+Answer: b
+
+Which memory management technique allows running programs larger than physical memory?
+
+# a) Virtual Memory
+b) CPU Scheduling
+c) Disk Fragmentation
+d) Memory Allocation
+Answer: a
+
+What is segmentation in memory management?
+
+a) Fixed-size memory blocks.
+# b) Dividing memory into variable-sized segments.
+c) Moving data to the cache.
+d) Compressing data in RAM.
+Answer: b

@@ -1,0 +1,62 @@
+
+##  System Calls:
+
+    System calls is implemented by the C.
+
+    A System call is a mechanism using which the user program can request a service from the kerenal for which it does not have the permission to perform.
+
+    System Call is the only way through which the a process can go into the kernel mode to the user mode.
+
+
+    By using the system calls the switching happens between the user mode and kernal mode.
+
+    It is way to communicate the user space to the kernal to do some work from the hardware through the kernal.
+
+## How the apps interact with the kernel?
+
+    Using the System calls.
+
+    Ex: Mkdir
+        Mkdir indirectly calls the kernal and asked the file magnt. module to crate a new directory.
+
+        Mkdir is just wrapper of the system calls.
+
+        Mkdir interacts with kernel using the system calls.
+    
+    Ex: Creating a process.
+
+        User excute a process from the user space
+
+        Get the system call
+
+        excute system call to ceate process 
+
+        return to user space.
+
+    Transition from the user mode to kernel mode is due to the software interrupts.
+
+## Types of the System Calls->
+
+    1. Process Control
+        process end
+        process abort
+        load,execute
+        create,delete
+    2. File Management
+        Create,Deleting
+        open,close
+        write,read
+        get file attribute
+        set file attribute
+    3. Device Management
+        Request,release Device
+        read,write,reposition
+    4. Infromation Maintainance
+        get time,date
+        ser time,date
+        get device attribute
+        set device attribute
+    5.  Information Maintinance
+    6.  Communication Management
+
+

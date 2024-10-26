@@ -1,0 +1,112 @@
+# Free Space Management in Operating Systems->
+
+The Operating System (OS) manages free space in memory to ensure efficient allocation to new processes and avoid fragmentation. It tracks available memory and reallocates it as processes complete or new ones start. Here are the primary 
+
+methods used:
+
+Bitmap or Bit Vector:
+
+The memory is divided into fixed-size blocks, each represented by a bit (0 for free, 1 for occupied).
+Helps in locating and allocating free memory blocks but can consume additional memory for storage.
+
+Linked List (Free List):
+
+A linked list maintains records of free memory blocks with pointers, linking free spaces.
+Allows dynamic memory allocation with variable-sized memory requests.
+
+Free Space Indexing:
+
+Maintains a table or an index of free memory spaces.
+Efficient for locating free memory quickly but needs frequent updating.
+
+Buddy System:
+
+Divides memory into blocks of sizes that are powers of 2, called "buddies."
+Combines or splits buddies as needed, helping reduce fragmentation.
+
+Memory Compaction:
+
+Moves processes in memory to consolidate free space, making large contiguous blocks available.
+Primarily used when external fragmentation occurs.
+
+# Key MCQs
+
+Which free space management technique uses bits to represent free and occupied memory blocks?
+
+a) Linked List
+b) Bitmap
+c) Paging
+d) Virtual Memory
+Answer: b
+
+In which method does the OS combine adjacent free memory blocks to create larger spaces?
+
+a) Paging
+b) Segmentation
+c) Memory Compaction
+d) Bitmap
+Answer: c
+
+The Buddy System divides memory into blocks that are in powers of what number?
+
+a) 4
+b) 2
+c) 8
+d) 10
+Answer: b
+
+What does the linked list method in free space management maintain?
+
+a) An index of file sizes
+b) A record of free and occupied memory blocks
+c) An ordered list of process priorities
+d) A bitmap of allocated memory
+Answer: b
+
+What is external fragmentation in memory management?
+
+a) Fragmentation that occurs within a process.
+b) Fragmentation of free space into small, scattered blocks.
+c) Compacting memory to create contiguous space.
+d) Fragmentation within the CPU cache.
+Answer: b
+
+Which free space management method helps minimize external fragmentation by combining adjacent free blocks?
+
+a) Buddy System
+b) Paging
+c) Segmentation
+d) Linked List
+Answer: a
+
+What is a significant disadvantage of using a bitmap for free space management?
+
+a) High storage overhead for large memories.
+b) Inability to allocate variable-sized blocks.
+c) Complexity in managing multiple linked lists.
+d) Reduced performance due to external fragmentation.
+Answer: a
+
+In the buddy system, what happens if a memory request doesn’t match the size of an available block?
+
+a) The memory is compacted.
+b) The buddy blocks are merged or split as needed.
+c) The process is terminated.
+d) The OS switches to virtual memory.
+Answer: b
+
+Which free space management method is most efficient when the memory allocation requests are for fixed-size blocks?
+
+a) Linked List
+b) Bitmap
+c) Paging
+d) Buddy System
+Answer: b
+
+What is the purpose of memory compaction in free space management?
+
+a) To create contiguous blocks of free memory.
+b) To increase the total memory size.
+c) To allocate memory on disk.
+d) To manage cache memory more effectively.
+Answer: a

@@ -1,0 +1,54 @@
+## Topic : What happens When we turn on the computer?
+
+## BOIS:(Basic Input Output System)
+
+    BIOS is traditional firmware used to start the computer when the turn on it.
+
+    It initalize the hardware,chacking everything is working and then load the OS from the hard disk.
+
+    It is stored on a small chip on the motherboard.
+
+## UEFI:(Unified Extensible firmware InterFace)
+
+    It is the modern replacement of the Bios.
+
+    It does the same work as the Bios but with more advanced features.
+
+    UEFI Supports a graphical interface larger hard drives,Faster Booting and the Better Security.
+
+    it is also stored in the motherbord but offers a more user friendly setup.
+    5 Step Process:
+
+    Step1: Power ON
+       In this step the system button is swich on.
+       Firstiy Mother Bord and the HardDisk Get the power. 
+
+    Step2: CPU Loads the Bios or the UEFI:
+        Bios is the the a small program which is the not OS which is stored in the Bios cheaps.
+
+        the UEFI is the advance version of the Bios.
+
+        1.CPU intialize
+        2.After the cpu initalization the it goes to the Bios cheap.
+    Step3.Bios and UEFI runs tests and  initiate hardware.
+            3.1) Bios loads some settings from a memory area which is backed by the CMOS Battery.
+            3.2)Program loads woith setting.
+    4.Bios and UEFI hands off to the Boot Device.
+
+        Boot Devices are the Disk, CD, USB device.
+
+        Boot Loader it is a program when it is executed it active the OS.
+
+        In the MBR (master Boot record) in which the boot loader is avilable.
+
+        But Nowdays the UEFI uses the EFI
+        It create a partition in disk where the Boot loader is present.
+
+    5. Boot loader loads the Full OS.
+
+        in the 4th step the Bios handeled the operation from onwards the Boot loader Operates.
+
+
+
+
+    
